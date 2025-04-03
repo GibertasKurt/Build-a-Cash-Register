@@ -1,0 +1,53 @@
+body {
+    background: linear-gradient(145deg, #1e1e1e, #3d3d3d);
+    background-attachment: fixed;
+    font-family: sans-serif;
+    margin: 5em;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #404040;
+    margin: auto auto 25px;
+    padding: 30px;
+    max-width: 50%;
+    border: solid 5px #0094ac;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px 5px #00c8e7;
+  }
+  input {
+    text-align: center;
+    padding: 5px;
+    border: solid 5px #0094ac;
+    font-size: 1.5em;
+  }
+  h1 {
+    margin: 0 0 10px 0;
+    color: #00c8e7;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 10px #000000;
+  }
+  button {
+    margin-top: 15px;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    background-image: linear-gradient(#00c8e7, #0094ac);
+    border: 3px solid #0094ac;
+  }
+  .receipt-container div {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  #results-div {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.25rem;
+  }
