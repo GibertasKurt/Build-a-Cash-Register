@@ -14,12 +14,23 @@ let cid = [
   ['TWENTY', 60],
   ['ONE HUNDRED', 100]
 ];
+const denominations = [
+  { name: 'ONE HUNDRED', value: 100.00 },
+  { name: 'TWENTY', value: 20.00 },
+  { name: 'TEN', value: 10.00 },
+  { name: 'FIVE', value: 5.00 },
+  { name: 'ONE', value: 1.00 },
+  { name: 'QUARTER', value: 0.25 },
+  { name: 'DIME', value: 0.10 },
+  { name: 'NICKEL', value: 0.05 },
+  { name: 'PENNY', value: 0.01 }
+];
 pricetxt.innerHTML = `Price: &#36;${price}`;
 
 function calculateTotalCashInDrawer(cid) {
   return cid.reduce((total, currency) => total + currency[1], 0);
 }
-function handlePurchase(cashAmountValue) {
+function handlePurchase(cashAmountValue) { // BRAIN ANEURYSM IMMINENT
   if (cashAmountValue < price) {
     alert("Customer does not have enough money to purchase the item");
   } else if (cashAmountValue === price) {
@@ -33,17 +44,6 @@ function handlePurchase(cashAmountValue) {
     } else {
       const change = [];
       let remainingChange = changeDueAmount;
-      const denominations = [
-        { name: 'ONE HUNDRED', value: 100.00 },
-        { name: 'TWENTY', value: 20.00 },
-        { name: 'TEN', value: 10.00 },
-        { name: 'FIVE', value: 5.00 },
-        { name: 'ONE', value: 1.00 },
-        { name: 'QUARTER', value: 0.25 },
-        { name: 'DIME', value: 0.10 },
-        { name: 'NICKEL', value: 0.05 },
-        { name: 'PENNY', value: 0.01 }
-      ];
 
       for (let i = 0; i < denominations.length; i++) { 
         const denomination = denominations[i];
